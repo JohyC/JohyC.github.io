@@ -1,0 +1,17 @@
+.about-box{
+  width: 1090px;
+  line-height: 36px;
+  text-align: center;
+  margin: 100px auto;
+}
+main h2{
+  line-height: 42px;
+  font-weight: 500;
+}
+.about-box li{
+  text-align: left;
+  list-style: disc;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 40px auto;
+}

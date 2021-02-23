@@ -1,0 +1,26 @@
+footer{
+  height: 123px;
+  margin-top: 30px;
+  background-color: #272B2E;
+  font-size: 12px;
+  color: #89898B;
+}
+.site-info{
+  float: left;
+  margin-top: 30px;
+}
+.site-info em{
+  margin-right: 26px;
+  font-style: normal;
+}
+.info-QR{
+  width: 74px;
+  height: 74px;
+  margin: 24px 0;
+  float: right;
+  cursor: pointer;
+}
+.info-QR img{
+  width: 100%;
+  height: 100%;
+}

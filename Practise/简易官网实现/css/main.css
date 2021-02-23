@@ -1,0 +1,102 @@
+/** base section **/
+main p{
+  text-align: center;
+  font-size: 20px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  line-height: 35px;
+}
+
+main em{
+  display: block;
+  text-align: center;
+  font-style: normal;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #7f7f7f;
+  font-size: 16px;
+  line-height: 26px;
+  width: 300px;
+}
+
+main h2{
+  display: block;
+  width: 280px;
+  height: 80px;
+  margin: 0 auto;
+  font-size: 28px;
+  font-weight: 500;
+  color: #333333;
+  font-family: PingFangSC-Medium, PingFang SC;
+  text-align: center;
+  padding-top: 96px;
+}
+
+.box-content{
+  float: left;
+  width: 308px;
+  margin: 20px 50px;
+}
+
+.box-content img{
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+/** section one; **/
+.introduce{
+  position: relative;
+}
+.home-banner{
+  width: 100%;
+}
+.circle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  transform: translate(-50%,-35%);
+}
+
+/** section two; **/
+.reason1{
+  background-color: #F8F8FA;
+}
+
+.reason1-box{
+  height: 700px;
+}
+
+
+/** section three; **/
+.reason2-box{
+  height: 590px;
+}
+.reason-large,.reason-large em{
+  width: 513px;
+}
+.objective-title{
+  padding-top: 0;
+}
+.objective-box{
+  width: 1088px;
+  height: 165px;
+  margin: 0 auto;
+}
+.box-wrapper{
+  display: inline-block;
+  width: 359px;
+  height: 90px;
+}
+.box-wrapper img{
+  display: block;
+  margin: 0 auto;
+}
+.main-bottom{
+  width: 1088px;
+  height: 400px;
+  margin: 0 auto;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>img-slider</title>
+  <style>
+    .container {
+      width: 1266px;
+      padding: 35px 0 0 0;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    .view {
+      height: 460px;
+      position: relative;
+    }
+
+    .view a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .view a img {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: 1s;
+    }
+
+    #toggle-1:checked~.view a:nth-child(1) img {
+      opacity: 1;
+    }
+
+    #toggle-2:checked~.view a:nth-child(2) img {
+      opacity: 1;
+    }
+
+    #toggle-3:checked~.view a:nth-child(3) img {
+      opacity: 1;
+    }
+
+    #toggle-4:checked~.view a:nth-child(4) img {
+      opacity: 1;
+    }
+
+    #toggle-5:checked~.view a:nth-child(5) img {
+      opacity: 1;
+    }
+
+    #toggle-6:checked~.view a:nth-child(6) img {
+      opacity: 1;
+    }
+
+    .toggle {
+      display: none;
+    }
+
+    .toggle-button {
+      display: inline-block;
+      border: 3px rgba(184, 175, 174, 0.3) solid;
+      background: rgba(144, 143, 143, 0.6);
+      border-radius: 999px;
+      margin-left: 4px;
+      box-sizing: border-box;
+      box-shadow: 0 0 0 black;
+      position: relative;
+      top: 435px;
+      left: 1135px;
+      z-index: 2;
+    }
+
+    .toggle-button::before {
+      content: " ";
+      display: block;
+      border: 3px rgba(143, 143, 143, 0.3) solid;
+      border-radius: 999px;
+      box-sizing: border-box;
+    }
+
+    #toggle-1:checked~.button-group .toggle-button:nth-child(1)::before {
+      border-color: white;
+    }
+
+    #toggle-2:checked~.button-group .toggle-button:nth-child(2)::before {
+      border-color: white;
+    }
+
+    #toggle-3:checked~.button-group .toggle-button:nth-child(3)::before {
+      border-color: white;
+    }
+
+    #toggle-4:checked~.button-group .toggle-button:nth-child(4)::before {
+      border-color: white;
+    }
+
+    #toggle-5:checked~.button-group .toggle-button:nth-child(5)::before {
+      border-color: white;
+    }
+
+    #toggle-6:checked~.button-group .toggle-button:nth-child(6)::before {
+      border-color: white;
+    }
+
+    .left,.right{
+			display: none;
+			width: 40px;
+			height: 70px;
+			box-sizing: border-box;
+			position: absolute;
+			z-index: 2;
+			background-image: url("./img/icon-slides.png");
+			background-repeat: no-repeat;
+			background-clip: content-box;
+    }
+    .left{
+			top: 245px;
+			left: 265px;
+			background-position: -84px 0;
+    }
+    .right{
+      top: 245px;
+			right: -2px;
+			background-position: -127px 0;
+    }
+    .left:hover,.right:hover{
+			background-image: url("./img/icon-slides.png");
+			background-repeat: no-repeat;
+			background-clip: content-box;
+    }
+    .left:hover{
+			background-position: 0 0;
+    }
+    .right:hover{
+			background-position: -45px 0;
+    }
+    #toggle-1:checked~.button-1{
+      display: block;
+    }
+    #toggle-2:checked~.button-2{
+      display: block;
+    }
+    #toggle-3:checked~.button-3{
+      display: block;
+    }
+    #toggle-4:checked~.button-4{
+      display: block;
+    }
+    #toggle-5:checked~.button-5{
+      display: block;
+    }
+    #toggle-6:checked~.button-6{
+      display: block;
+    }
+    .button-group{
+      height: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <input type="radio" name="toggle" id="toggle-1" class="toggle" checked>
+    <input type="radio" name="toggle" id="toggle-2" class="toggle">
+    <input type="radio" name="toggle" id="toggle-3" class="toggle">
+    <input type="radio" name="toggle" id="toggle-4" class="toggle">
+    <input type="radio" name="toggle" id="toggle-5" class="toggle">
+    <input type="radio" name="toggle" id="toggle-6" class="toggle">
+
+
+    <label for="toggle-6" class="left button-1"></label>
+    <label for="toggle-1" class="left button-2"></label>
+    <label for="toggle-2" class="left button-3"></label>
+    <label for="toggle-3" class="left button-4"></label>
+    <label for="toggle-4" class="left button-5"></label>
+    <label for="toggle-5" class="left button-6"></label>
+    
+    <label for="toggle-2" class="right button-1"></label>
+    <label for="toggle-3" class="right button-2"></label>
+    <label for="toggle-4" class="right button-3"></label>
+    <label for="toggle-5" class="right button-4"></label>
+    <label for="toggle-6" class="right button-5"></label>
+    <label for="toggle-1" class="right button-6"></label>
+
+    <div class="button-group">
+      <label for="toggle-1" class="toggle-button"></label>
+      <label for="toggle-2" class="toggle-button"></label>
+      <label for="toggle-3" class="toggle-button"></label>
+      <label for="toggle-4" class="toggle-button"></label>
+      <label for="toggle-5" class="toggle-button"></label>
+      <label for="toggle-6" class="toggle-button"></label>
+    </div>
+
+    <div class="view">
+      <a href=""><img src="./img/img (1).webp" alt="商品"></a>
+      <a href=""><img src="./img/img (2).webp" alt="商品"></a>
+      <a href=""><img src="./img/img (3).webp" alt="商品"></a>
+      <a href=""><img src="./img/img (4).webp" alt="商品"></a>
+      <a href=""><img src="./img/img (5).webp" alt="商品"></a>
+      <a href=""><img src="./img/img (6).webp" alt="商品"></a>
+    </div>
+  </div>
+</body>
+
+</html>
