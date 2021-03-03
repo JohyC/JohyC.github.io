@@ -128,7 +128,8 @@ body {
         list-style: circle;
         margin: 0; }
       .container .main .info-unit ul li .info-content .fa {
-        font-size: 1em; }
+        font-size: 1em;
+        width: 1em; }
 
 /* -------------------------------------------------
  * 文档底部

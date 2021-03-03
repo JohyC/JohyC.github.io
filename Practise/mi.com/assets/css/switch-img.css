@@ -1,0 +1,130 @@
+.switch-img{
+  position: relative;
+  z-index: 10;
+}
+.view{
+  height: 460px;
+}
+.view img{
+  width: 1226px;
+  height: 460px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1s;
+}
+.toggle{
+  display: none;
+}
+.btn-group{
+  position: absolute;
+  z-index: 20;
+  right: 10px;
+  top: 435px;
+}
+.switch-btn{
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 2px solid #fff;
+  border-color: hsla(0, 0%, 100%, .3);
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 999px;
+  margin: 0 4px;
+  opacity: 1;
+  cursor: pointer;
+}
+.left,
+.right{
+  display: none;
+  width: 40px;
+  height: 70px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  cursor: pointer;
+}
+.left{
+  left: 234px;
+  background: url("../images/icon-slides.png") no-repeat -84px 50%;
+  background-clip: content-box;
+}
+.right{
+  right: 0;
+  background: url("../images/icon-slides.png") no-repeat -125px 50%;
+  background-clip: content-box;
+}
+.left:hover{
+  background-position: 0 50%;
+}
+.right:hover{
+  background-position: -42px 50%;
+}
+
+#toggle-1:checked~.view a:nth-child(1) img {
+  opacity: 1;
+}
+
+#toggle-2:checked~.view a:nth-child(2) img {
+  opacity: 1;
+}
+
+#toggle-3:checked~.view a:nth-child(3) img {
+  opacity: 1;
+}
+
+#toggle-4:checked~.view a:nth-child(4) img {
+  opacity: 1;
+}
+
+#toggle-5:checked~.view a:nth-child(5) img {
+  opacity: 1;
+}
+
+#toggle-1:checked~.button-1{
+  display: block;
+}
+#toggle-2:checked~.button-2{
+  display: block;
+}
+#toggle-3:checked~.button-3{
+  display: block;
+}
+#toggle-4:checked~.button-4{
+  display: block;
+}
+#toggle-5:checked~.button-5{
+  display: block;
+}
+#toggle-6:checked~.button-6{
+  display: block;
+}
+
+.switch-btn:hover{
+  background-color: hsla(0, 0%, 100%, .4);
+  border-color: rgba(0, 0, 0, .4);
+}
+
+#toggle-1:checked ~ .btn-group .sw-btn1{
+  background-color: hsla(0, 0%, 100%, .4);
+  border-color: rgba(0, 0, 0, .4);
+}
+#toggle-2:checked ~ .btn-group .sw-btn2{
+  background-color: hsla(0, 0%, 100%, .4);
+  border-color: rgba(0, 0, 0, .4);
+}
+#toggle-3:checked ~ .btn-group .sw-btn3{
+  background-color: hsla(0, 0%, 100%, .4);
+  border-color: rgba(0, 0, 0, .4);
+}
+#toggle-4:checked ~ .btn-group .sw-btn4{
+  background-color: hsla(0, 0%, 100%, .4);
+  border-color: rgba(0, 0, 0, .4);
+}
+#toggle-5:checked ~ .btn-group .sw-btn5{
+  background-color: hsla(0, 0%, 100%, .4);
+  border-color: rgba(0, 0, 0, .4);
+}
+
