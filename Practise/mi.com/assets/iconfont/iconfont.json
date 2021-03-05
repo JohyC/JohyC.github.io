@@ -1,0 +1,86 @@
+{
+  "id": "1575702",
+  "name": "小米模仿",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1420819",
+      "name": "next",
+      "font_class": "next",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "1508318",
+      "name": "prev",
+      "font_class": "prev",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "316184",
+      "name": "player",
+      "font_class": "17",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "562700",
+      "name": "Right",
+      "font_class": "right1",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "7206042",
+      "name": "Right arrow",
+      "font_class": "Rightarrow",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "248926",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "248927",
+      "name": "left",
+      "font_class": "left",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "1908256",
+      "name": "185 right arrowhead",
+      "font_class": "rightarrowhead",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1908258",
+      "name": "186 left arrowhead",
+      "font_class": "leftarrowhead",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "5994119",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "8776823",
+      "name": "cart",
+      "font_class": "icon-test",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    }
+  ]
+}
