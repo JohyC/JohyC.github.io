@@ -3,6 +3,7 @@
 }
 .box-header{
   height: 58px;
+  position: relative;
 }
 .box-header .title{
   margin: 0;
@@ -10,6 +11,25 @@
   font-weight: 200;
   line-height: 58px;
   color: #333;
+}
+.all{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.all a{
+  font-size: 16px;
+  line-height: 58px;
+  color: #424242;
+  transition: all .4s;
+}
+.all a i{
+  color: #b0b0b0;
+  transition: all .4s;
+}
+.all a:hover,
+.all a:hover i{
+  color: #e53935;
 }
 .flashsale-countdown{
   float: left;
@@ -306,3 +326,189 @@
   margin: 22px 0;
   overflow: hidden;
 }
+/*           分隔符            */
+.more{
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #424242;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0;
+}
+
+.wapper{
+  display: flex;
+  width: 1226px;
+  height: 628px;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+.brick-img{
+  width: 234px;
+  height: 614px;
+}
+.brick-img a{
+  display: block;
+}
+.brick-img a img{
+  width: 234px;
+  height: 614px;
+}
+.brick-item{
+  width: 234px;
+  height: 260px;
+  padding: 20px 0;
+  background-color: #fff;
+  transition: all .2s;
+  flex-grow: 0;
+}
+.figure-img{
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 18px;
+}
+.brick-item .title,
+.brick-item .desc,
+.brick-item .price{
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.brick-item .title{
+  margin: 0 10px 2px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+.brick-item .desc{
+  margin: 0 10px 10px;
+  height: 18px;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+.brick-item.price{
+  margin: 0 10px 14px;
+}
+.brick-img,
+.brick-item{
+  transition: all .2s linear;
+}
+.brick-img:hover,
+.brick-item:hover{
+  box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
+  transform: translate3d(0,-2px,0);
+}
+
+/*   分隔符   */
+.tab-list{
+  padding: 16px 0 0;
+  font-size: 16px;
+}
+.tab-list li{
+  float: left;
+  margin: 0 0 0 30px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  transition: all .3s;
+  cursor: pointer;
+}
+.tab-list li:hover{
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
+}
+.brick-item-img{
+  height: 300px;
+  padding: 0;
+}
+.brick-small1,
+.brick-small2{
+  height: 93px;
+  padding: 50px 0 0 0 ;
+  position: relative;
+}
+.figure-img-small{
+  position: absolute;
+  right: 20px;
+  top: 32px;
+  width: 80px;
+  height: 80px;
+}
+.brick-small1 .title{
+  margin: -10px 110px 5px 30px;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  width: 100px;
+  white-space: normal;
+}
+.brick-small1 .price{
+  margin: 0 110px 0 30px;
+  font-size: 14px;
+}
+.figure-more{
+  position: absolute;
+  right: 35px;
+  top: 48px;
+  width: 48px;
+  height: 48px;
+  color: #ff6700;
+}
+.figure-more i{
+  font-size: 48px;
+  line-height: 48px;
+}
+.desc-more{
+  margin: 0 110px 0 30px;
+  font-size: 18px;
+  color: #333;
+}
+.desc-more p{
+  margin: 0;
+}
+.desc-more small{
+  display: block;
+  font-size: 12px;
+  color: #757575;
+}
+
+.hot{
+  right: 94px;
+}
+.row{
+  position: relative;
+  height: 628px;
+}
+.row .wapper:hover{
+  transition: none;
+}
+.row .case{
+  float: left;
+}
+
+/* 列表切换并延迟 */
+.case .wapper{
+  position: absolute;
+  z-index: 0;
+  transition: z-index 0s 10000s;
+}
+.case:first-child .wapper{
+  z-index: 1;
+}
+.row:hover > .case > .wapper{
+  transition: none;
+}
+.case:hover > .wapper{
+  z-index: 10;
+}
+
+.row .more{
+  transition: border .3s .1s, color .3s;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.more:hover{
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
+}
+/***  关键点，需要注意HTML结构        ***/
