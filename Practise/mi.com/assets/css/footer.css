@@ -1,0 +1,115 @@
+.footer-service{
+  padding: 27px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.list-service li{
+  float: left;
+  width: 19.8%;
+  height: 25px;
+  border-left: 1px solid #e0e0e0;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+}
+.list-service li a{
+  color: #616161;
+  transition: color .2s;
+}
+.list-service li a i{
+  margin-right: 6px;
+  font-size: 24px;
+  line-height: 24px;
+  vertical-align: -4px;
+}
+.list-service li:first-child{
+  border-left: none;
+}
+.list-service li:hover a{
+  color: #ff6700;
+}
+
+.footer-links{
+  padding: 40px 0;  
+}
+.col-links{
+  float: left;
+  width: 160px;
+  margin: 0;
+}
+.col-links dt{
+  margin: -1px 0 26px;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #424242;
+}
+.col-links dd{
+  margin: 10px 0 0;
+  font-size: 12px;
+}
+.col-contact{
+  float: right;
+  width: 251px;
+  border-left: 1px solid #e0e0e0;
+  text-align: center;
+  color: #616161;
+}
+.col-contact p{
+  margin: 0 0 5px 0;
+  font-size: 12px;
+}
+.phone{
+  font-size: 22px;
+  line-height: 1;
+  color: #ff6700;
+}
+.col-contact > a{
+  display: inline-block;
+  border: 1px solid #ff6700;
+  background-color: #fff;
+  color: #ff6700;
+  width: 118px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 28px;
+}
+
+
+.site-info{
+  padding: 30px 0;
+  font-size: 12px;
+  background: #fafafa;
+}
+.site-info .container{
+  position: relative;
+}
+.site-info .logo{
+  width: 57px;
+  height: 57px;
+  margin-right: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(https://s02.mifile.cn/assets/static/image/logo-footer.png) no-repeat 50% 50%;
+  overflow: hidden;
+  font-size: 0;
+}
+.info-text{
+  color: #b0b0b0;
+  padding-left: 67px;
+}
+.info-text .sites a{
+  color: #757575;
+}
+.info-text p{
+  margin: 0;
+  line-height: 18px;
+}
+.info-text p a{
+  color: #b0b0b0;
+}
+.info-text p a:hover{
+  color: #ff6700;
+}
