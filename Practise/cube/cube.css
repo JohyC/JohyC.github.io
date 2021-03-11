@@ -1,0 +1,74 @@
+
+.container{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.cube{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    /*transform: rotateZ(45deg) rotateY(-45deg) rotateX(-45deg);*/
+    animation: cube 6s linear;
+    animation-iteration-count: infinite;
+}
+
+.face{
+    width: 110px;
+    height: 110px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgba(0, 0, 0, -0);
+    transition: 1s;
+}
+.face1{
+    transform: rotateY(0) translateZ(55px);
+}
+.face2{
+    transform: rotateY(90deg) translateZ(55px);
+}
+.face3{
+    transform: rotateY(180deg) translateZ(55px);
+}
+.face4{
+    transform: rotateY(270deg) translateZ(55px);
+}
+.face5{
+    transform: rotateX(90deg) translateZ(55px);
+}
+.face6{
+    transform: rotateX(270deg) translateZ(55px);
+}
+
+.cube:hover > .face1{
+    background-color: #f8c0ffd6;
+}
+.cube:hover > .face2{
+    background-color: #c0c5ffd9;
+}
+.cube:hover > .face3{
+    background-color: #c0fff9e6;
+}
+.cube:hover > .face4{
+    background-color: #c0ffd0d1;
+}
+.cube:hover > .face5{
+    background-color: #0fc65036;
+}
+.cube:hover > .face6{
+    background-color: #ffc0f126;
+}
+@keyframes cube{
+    0%{
+        transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg);
+    }
+    100%{
+        transform: rotateZ(0deg) rotateY(360deg) rotateX(360deg);
+    }
+}
