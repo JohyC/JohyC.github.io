@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todo-app</title>
+  <link rel="stylesheet" href="./css/todo.css">
+  <script src="./js/vue.js"></script>
+  <script defer src="./js/todo-app.js"></script>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="title">
+        <h1>添加您的待办事项！</h1>
+      </div>
+      <div class="add">
+        <input type="text" v-model="message" @keyup.enter="onEnter" placeholder="今天做点儿什么呢?">
+        <button v-on:click="add"><em class="plus"></em></button>
+      </div>
+      <div class="filters">
+        <span class="filter"
+        v-for="(filter, index) in filters" :key="filter.value"
+        :class="{ active: index === isActive }"
+        @click="clickActive(filter,index)"
+        >{{filter.text}}</span>
+      </div>
+      <div class="item">
+        <div class="list" 
+        v-for="(todo, index) of filteredTodos" :key="todo.key"  
+        :ref="`change`"
+        >
+          <label for="">
+            <!-- input状态变化时，修改 todos状态 -->
+            <input type="checkbox" 
+            v-model="filteredTodos[index].completed"
+            >
+            <span class="check-button"></span>
+            <span class="text">{{ todo.content }}</span>
+            <span v-on:click="del(index)" class="del"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -10,7 +10,8 @@ body {
   padding-bottom: 0;
   box-sizing: border-box;
   font-size: .9em; }
-  body .fa {
+  body .fa ,
+  body .iconfont{
     margin-right: .3em; }
   body .info-unit {
     margin-bottom: 1rem; }

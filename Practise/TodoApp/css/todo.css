@@ -1,0 +1,203 @@
+@font-face{
+  font-family: "Helvetica-Neue";
+  src: url("./Helvetica-Neue/Helvetica-Neue.ttf");
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica,"Helvetica-Neue", "PingFang SC", "Microsoft Yahei", sans-serif;
+}
+
+/*   整体页面   */
+body{
+  overflow-x: hidden;
+}
+main{
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: rgb(203, 210, 240);
+}
+.container{
+  width: 60%;
+  max-width: 500px;
+  background: rgb(245, 246, 252);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 24px;
+  padding: 48px 28px;
+}
+
+/*   标题   */
+.title h1{
+  margin: 24px 0;
+  font-size: 28px;
+  color: #414873;
+  text-align: center;
+}
+
+/*   添加框   */
+.add{
+  position: relative;
+  text-align: center;
+}
+.add input{
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 48px;
+  outline: none;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #626262;
+  padding: 18px 52px 18px 18px;
+}
+.add button{
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: 0;
+  right: 0;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+  background: linear-gradient(0.25turn, #c3aaf1, #7f95f7);
+  color: white;
+}
+.add .plus{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#fff,#fff), linear-gradient(#fff,#fff);
+  background-size: 60% 2px, 2px 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 3s;
+}
+.add .plus:hover{
+  background: linear-gradient(#fff,#fff), linear-gradient(#fff,#fff);
+  background-size: 60% 2px, 2px 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+
+/*   过滤项   */
+.filters{
+  margin: 24px 2px;
+  color: #c0c3ce;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+}
+.filter{
+  margin-right: 14px;
+  transition: 0.8s;
+  cursor: pointer;
+  user-select: none;
+}
+.filter input{
+  display: none;
+}
+.active{
+  color: #6b729c;
+  transform: scale(1.2);
+  font-weight: 600;
+  font-style: italic;
+}
+
+/*   待办项目列表   */
+.item{
+  display: grid;
+  row-gap: 14px;
+}
+
+.list{
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  color: #626262;
+}
+
+.list label{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.list label span.check-button{
+  position: absolute;
+  top: 0;
+}
+
+.list label span.check-button::after,
+.list label span.check-button::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.list label span.check-button::after{
+  transition: 0.4s;
+  background: #b382f9;
+  transform: translate(1px, 1px) scale(0.8);
+  opacity: 0;
+}
+.list label span.check-button::before{
+  border: 1px solid #b382f9;
+}
+
+.list label input{
+  margin-right: 16px;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.list label input:checked + span.check-button::after{
+  opacity: 1;
+}
+.list label input:checked ~ span.text{
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.del{
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  border: 1px solid rgb(180, 183, 245);
+  border-radius: 50%;
+
+  background: linear-gradient(rgb(215, 217, 255),rgb(215, 217, 255)), linear-gradient(rgb(215, 217, 255),rgb(215, 217, 255));
+  background-size: 60% 2px, 2px 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(45deg);
+  opacity: .6;
+  transition: 1s;
+}
+.del:hover{
+  background: linear-gradient(#8A8FA3,#8A8FA3), linear-gradient(#8A8FA3, #8A8FA3);
+  background-size: 60% 2px, 2px 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  border-color: #CBD2F0;
+  opacity: 1;
+}
