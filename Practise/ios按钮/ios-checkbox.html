@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CheckBox</title>
+    <style>
+      #up {
+        display: none;
+      }
+
+      #up + .a {
+        border: 1px solid rgb(205, 205, 205);
+        width: 333px;
+        height: 190px;
+        display: inline-block;
+        border-radius: 150px;
+        position: relative;
+        box-sizing: border-box;
+        box-shadow: 0 0 300px 100px white inset;
+        /* background-color: #fff; */
+        transition: 1s;
+      }
+
+      #up:checked + .a {
+        /* background-color: rgb(48, 243, 76); */
+        box-shadow: 0 0 300px 100px rgb(48, 243, 76) inset;
+        border: 1px solid rgb(48, 243, 76);
+        border-width: 50px;
+      }
+
+      #up + .a::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background-color: white;
+        width: 170px;
+        height: 170px;
+        top: 10px;
+        left: 3px;
+        box-shadow: 5px 3px 10px gray;
+        transition: 1s;
+      }
+
+      #up:checked + .a::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background-color: white;
+        width: 170px;
+        height: 170px;
+        top: -40px;
+        left: 110px;
+        box-shadow: 5px -3px -10px gray;
+      }
+
+      .input {
+        display: none;
+      }
+
+      /** 单选按钮状态  **/
+      .r {
+        border: 3px solid;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .input:checked + .r {
+        width: 30px;
+        height: 30px;
+        border-color: rgb(4, 193, 96);
+        box-sizing: border-box;
+        /* box-shadow: 0 0 0 10px rgba(4, 193, 96, 30%); */
+        transition: 1s;
+      }
+
+      .r::before {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        width: 0px;
+        height: 0px;
+        border: 1px solid white;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        /* top: 11px;
+        left: 11px;  */
+        transition: 1s;
+      }
+
+      .input:checked + .r::before {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 18px;
+        height: 18px;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(4, 193, 96);
+        position: absolute;
+        /* top: 3px;
+        left: 3px;  */
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+      }
+
+      .r:active {
+        box-shadow: 0 0 0 15px rgba(4, 193, 96, 30%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="checkbox" name="" id="up" />
+    <label for="up" class="a"></label>
+    <br />
+    <br />
+    <div>
+      <input type="radio" name="r" id="r1" class="input" />
+      <label for="r1" class="r"></label>Radio Button
+
+      <input type="radio" name="r" id="r2" class="input" />
+      <label for="r2" class="r"></label> Radio Button
+
+      <input type="radio" name="r" id="r3" class="input" />
+      <label for="r3" class="r"></label> Radio Button
+    </div>
+  </body>
+</html>
