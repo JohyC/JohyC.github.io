@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/topbar.css">
   <link rel="stylesheet" href="./css/partnership-main.css">
   <link rel="stylesheet" href="./css/footer.css">
+  <script defer src="./js/area-selection.js"></script>
 </head>
 
 <body>
@@ -63,10 +64,16 @@
       <input type="text" name="tel_code" id="tel_code" placeholder="填写验证码">
       <div id="getCode" role="button">获取验证码</div>
       <br>
-      <label for="">意向城市：</label>
-      <select name="province" id=""></select>
-      <select name="city" id=""></select>
-      <select name="county" id=""></select>
+      <label for="" >意向城市：</label>
+      <select name="province" id="province" onchange="provChange()">
+        <option value="请选择" disabled selected>请选择</option>
+      </select>
+      <select name="city" id="city" onchange="cityChange()">
+        <option value="请选择" disabled selected>请选择</option>
+      </select>
+      <select name="county" id="county">
+        <option value="请选择" disabled selected>请选择</option>
+      </select>
       <br>
       <div id="submit" role="button">提交申请</div>
     </div>

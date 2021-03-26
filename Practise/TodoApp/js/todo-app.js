@@ -53,8 +53,8 @@ var vue = new Vue({
       this.$data.todos.splice(index, 1);
     },
     clickActive: function (filter, index) {
-      debugger
       this.isActive = index;
+      debugger
       switch (filter.value) {
         case "done":
           // @ts-ignore
