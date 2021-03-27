@@ -161,9 +161,10 @@ hr {
 
 aside {
   position: fixed;
-  right: 0;
+  right: -1.8%;
   top: 30%;
-  z-index: 2; }
+  z-index: 2;
+  transition: all 1s; }
   aside ul li {
     margin-bottom: 10px;
     -webkit-border-radius: 10px 0 0 10px;
@@ -178,7 +179,9 @@ aside {
       line-height: 38px;
       padding-left: 10px;
       color: #fff; }
-
+      aside:hover{
+        right: 0;
+      }
 progress {
   background-color: #f6f6f6;
   display: inline;
