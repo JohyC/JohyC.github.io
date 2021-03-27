@@ -1,7 +1,7 @@
 // @ts-nocheck
 function ajax(method, url, params) {
   let ajax = new XMLHttpRequest();
-  params = !!params == false ? params : true;
+  params = params === false ? false : true;
   ajax.open(method, url, params);
   ajax.send();
   return ajax;
