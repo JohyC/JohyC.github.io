@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "checkJs": false,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "module": "commonjs",
+    "paths": {
+      "@/*": ["./assets/*"],
+    }
+  },
+  "exclude": [],
+    // exclude 全局属性，排除所不需要的文件；
+  "include": [
+      "./assets/js/*", 
+  ]
+    //include 全局属性，引入所需要的文件；
+}

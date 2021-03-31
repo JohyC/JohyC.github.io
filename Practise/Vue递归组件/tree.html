@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+  <script defer src="./tree.js"></script>
+</head>
+
+<body>
+  <style>
+    ul,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+    ul{
+      width: 14rem;
+    }
+    li {
+      display: inline-block;
+    }
+
+    div {
+      padding-left: 3px;
+      user-select: none;
+      display: inline-block;
+    }
+  </style>
+  <div id="tree">
+    <tree-menu :value="list"></tree-menu>
+  </div>
+
+  <script type="text/x-template" id="tree-menu">
+    <div v-if="value.pid" >
+      <ul  @click="collapse = !collapse">
+        <li> {{ collapse ? '-' : '+'  }} </li>
+        <li> {{ value.id }} </li>
+        <li> {{ value.name }} </li>
+      </ul>
+      <div
+      v-show="collapse" 
+      v-for="(item, index) in value" :key="index">
+        <tree-menu :value="item"></tree-menu>
+      </div>
+    </div>
+  </script>
+
+</body>
+
+</html>

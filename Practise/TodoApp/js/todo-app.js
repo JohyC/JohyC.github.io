@@ -16,7 +16,6 @@ var filters = {
     });
   },
 };
-// @ts-ignore
 var vue = new Vue({
   el: ".container",
   data: {
@@ -38,33 +37,30 @@ var vue = new Vue({
   },
   methods: {
     add: function () {
-      if (this.$data.message !== "") {
-        this.$data.todos.push({
-          content: this.$data.message,
-          key: Date.now()
+      if (this.message !== "") {
+        this.todos.push({
+          content: this.message,
+          key: Date.now(),
         });
       }
-      this.$data.message = "";
+      this.message = "";
     },
     onEnter: function () {
       this.add();
     },
     del: function (index) {
-      this.$data.todos.splice(index, 1);
+      this.todos.splice(index, 1);
     },
     clickActive: function (filter, index) {
       this.isActive = index;
-      debugger
+      debugger;
       switch (filter.value) {
         case "done":
-          // @ts-ignore
-          return this.$data.visibility = "done" 
+          return (this.visibility = "done");
         case "todo":
-          // @ts-ignore
-          return this.$data.visibility = "todo"
+          return (this.visibility = "todo");
         default:
-          // @ts-ignore
-          return this.$data.visibility = "all"
+          return (this.visibility = "all");
       }
     },
   },
