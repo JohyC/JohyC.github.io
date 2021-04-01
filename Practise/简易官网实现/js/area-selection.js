@@ -1,30 +1,17 @@
-// @ts-nocheck
+/**
+ * 简易Ajax封装
+ * @param {String} method http请求方式
+ * @param {String} url 目标链接
+ * @param {Boolean} params 异步或同步
+ * @returns XMLHttpRequest
+ */
 function ajax(method, url, params) {
   let ajax = new XMLHttpRequest();
   params = params === false ? false : true;
   ajax.open(method, url, params);
   ajax.send();
   return ajax;
-}
-/**
- * 异步获取data
-let getdata = async function (method, url, params) {
-  let data = await ajax(method, url, params);
-  return JSON.parse(data.response);
 };
-let data = getdata(
-  "get",
-  "https://raw.githubusercontent.com/xieranmaya/china-city-area-zip-data/master/min/china-city-area-zip.min.json"
-);
- */
-let data = ajax(
-  "get",
-  "https://raw.githubusercontent.com/xieranmaya/china-city-area-zip-data/master/min/china-city-area-zip.min.json",
-  false
-);
-data = data.response;
-// @ts-ignore
-data = JSON.parse(data);
 
 var provinces = document.getElementById("province"),
   citys = document.getElementById("city"),
@@ -34,8 +21,9 @@ for (let province of data) {
   let option = document.createElement("option");
   option.text = province.name;
   provinces.appendChild(option);
-}
-var midValue
+};
+
+var midValue;
 function provChange() {
   let selectedProv = provinces.selectedIndex - 1;
   midValue = selectedProv;
@@ -44,11 +32,12 @@ function provChange() {
     option.text = city.name;
     citys.appendChild(option);
   }
-}
-function cityChange(){
+};
+
+function cityChange() {
   let selectedProv = midValue;
   let selectedCity = citys.selectedIndex - 1;
-  for(let county of data[selectedProv].child[selectedCity].child){
+  for (let county of data[selectedProv].child[selectedCity].child) {
     let option = document.createElement("option");
     option.text = county.name;
     countys.appendChild(option);
